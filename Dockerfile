@@ -4,7 +4,7 @@ MAINTAINER Betacloud Solutions GmbH (https://www.betacloud-solutions.de)
 ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION ${VERSION:-latest}
 
-COPY files/extend_start.sh /extend_start.sh
+COPY files/run.sh /run.sh
 
 RUN apt-get update \
     && apt-get upgrade -y \
