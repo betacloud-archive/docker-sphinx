@@ -26,6 +26,7 @@ if [[ -z $VERSION ]]; then
 fi
 
 docker build \
+    --squash \
     --build-arg "VERSION=$VERSION" \
     --tag "$REPOSITORY:$VERSION" \
     $BUID_OPTS .
