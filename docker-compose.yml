@@ -1,0 +1,9 @@
+---
+version: '2'
+services:
+  builder:
+    volumes:
+     - ./source:/source
+     - ./build/html:/html
+     - ./build/latex:/latex
+    image: betacloud/sphinx-latex
