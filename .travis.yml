@@ -15,7 +15,7 @@ before_install:
 
 env:
   global:
-    - REPOSITORY=betacloud/sphinx-latex
+    - REPOSITORY=betacloud/sphinx
 
 script:
   - bash scripts/build.sh

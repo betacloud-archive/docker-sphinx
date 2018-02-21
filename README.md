@@ -1,7 +1,7 @@
-# docker-sphinx-latex
+# docker-sphinx
 
-[![Build Status](https://travis-ci.org/betacloud/docker-sphinx-latex.svg?branch=master)](https://travis-ci.org/betacloud/docker-sphinx-latex)
-[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-betaloud%2Fsphinx--latex-blue.svg)](https://hub.docker.com/r/betacloud/sphinx-latex/)
+[![Build Status](https://travis-ci.org/betacloud/docker-sphinx.svg?branch=master)](https://travis-ci.org/betacloud/docker-sphinx)
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-betaloud%2Fsphinx-blue.svg)](https://hub.docker.com/r/betacloud/sphinx/)
 
 License
 -------

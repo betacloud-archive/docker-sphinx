@@ -3,7 +3,7 @@ import datetime
 extensions = ['sphinxcontrib.blockdiag', 'sphinxcontrib.nwdiag', 'sphinx.ext.todo']
 source_suffix = '.rst'
 master_doc = 'index'
-project = u'docker-sphinx-latex'
+project = u'docker-sphinx'
 copyright = u'2018, Betacloud Solutions GmbH'
 author = u'Betacloud Solutions GmbH'
 version = datetime.datetime.today().strftime('%Y.%m.%d')

@@ -6,4 +6,4 @@ services:
      - ./source:/source
      - ./build/html:/html
      - ./build/latex:/latex
-    image: betacloud/sphinx-latex
+    image: betacloud/sphinx
