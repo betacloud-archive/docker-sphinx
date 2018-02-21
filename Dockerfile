@@ -4,6 +4,7 @@ MAINTAINER Betacloud Solutions GmbH (https://www.betacloud-solutions.de)
 ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION ${VERSION:-latest}
 
+COPY files/conf.py /conf.py
 COPY files/run.sh /run.sh
 
 RUN apt-get update \
