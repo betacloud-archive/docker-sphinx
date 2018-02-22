@@ -4,6 +4,7 @@ LABEL maintainer="Betacloud Solutions GmbH (https://www.betacloud-solutions.de)"
 ENV DEBIAN_FRONTEND noninteractive
 ENV VERSION ${VERSION:-latest}
 
+COPY files/betacloud.png /betacloud.png
 COPY files/preamble.tex /preamble.tex
 COPY files/conf.py /conf.py
 COPY files/run.sh /run.sh
