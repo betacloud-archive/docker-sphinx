@@ -29,7 +29,7 @@ latex_elements = {
 latex_documents = [
   (DOCUMENT,
    "%s.tex" % DOCUMENT,
-   os.environ.get("TITLE", "Dokumentation"),
+   '',
    os.environ.get("CUSTOMER", "Betacloud Solutions GmbH"),
    "howto"
   )
