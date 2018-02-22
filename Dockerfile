@@ -21,6 +21,7 @@ RUN apt-get update \
 
 VOLUME /html
 VOLUME /latex
+VOLUME /pdf
 VOLUME /source
 
 WORKDIR /source

@@ -1,19 +1,26 @@
 #!/usr/bin/env bash
-set -x
 
-CONFPATH=/sourc/conf.py
+CONFPATH=${CONFPATH:-/source}
+DOCUMENT=${DOCUMENT:-index}
+TYPE=${TYPE:-html}
 
-if [[ ! -e $CONFPATH ]]; then
-    CONFPATH=/conf.py
+if [[ ! -e $CONFPATH/conf.py ]]; then
+    CONFPATH=/
 fi
 
-# build html
+##########
+# html
+if [[ $TYPE == "html" ]]; then
+    sphinx-build -c $CONFPATH -a -b html /source /html
+fi
 
-sphinx-build -a -b latex /source /html
+##########
+# latex
+if [[ $TYPE == "latex" ]]; then
+    sphinx-build -c $CONFPATH -a -b latex /source /latex
 
-# build pdf / latex
+    cd /latex
+    LATEXMKOPTS="-interaction=nonstopmode -f" make -e all-pdf
 
-sphinx-build -a -b latex /source /latex
-
-cd latex
-LATEXMKOPTS="-interaction=nonstopmode -f" make -e all-pdf
+    cp /latex/$DOCUMENT.pdf /pdf
+fi

@@ -1,9 +1,10 @@
 import datetime
+import os
 
 extensions = ['sphinxcontrib.blockdiag', 'sphinxcontrib.nwdiag', 'sphinx.ext.todo']
 source_suffix = '.rst'
-master_doc = 'index'
-project = u'docker-sphinx'
+master_doc = os.environ.get('DOCUMENT', 'index')
+project = os.environ.get('DOCUMENT', 'index')
 copyright = u'2018, Betacloud Solutions GmbH'
 author = u'Betacloud Solutions GmbH'
 version = datetime.datetime.today().strftime('%Y.%m.%d')
