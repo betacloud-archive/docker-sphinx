@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get clean \
     && apt-get install -y texlive-full make python-pip \
-    && pip install --upgrade pip \
+    && pip install --upgrade "pip<10.0.0" \
     && pip install \
       Flask-Sphinx-Themes \
       sphinx \
