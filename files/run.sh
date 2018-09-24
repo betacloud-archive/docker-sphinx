@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 CONFPATH=${CONFPATH:-/source}
+DOCUMENT=${FILENAME%.rst}
 FILENAME=${FILENAME:-index.rst}
 SOURCEPATH=${SOURCEPATH:-/source}
 TYPE=${TYPE:-html}
@@ -30,6 +31,6 @@ if [[ $TYPE == "latex" ]]; then
     cd /latex
     LATEXMKOPTS="-interaction=nonstopmode -f" make -e all-pdf
 
-    cp /latex/${FILENAME%.rst}.pdf /pdf/$(date +%Y%m%)-${FILENAME%.rst}.pdf
+    cp /latex/$DOCUMENT.pdf /pdf/$(date +%Y%m%)-$DOCUMENT.pdf
 
 fi
