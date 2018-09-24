@@ -30,6 +30,6 @@ if [[ $TYPE == "latex" ]]; then
     cd /latex
     LATEXMKOPTS="-interaction=nonstopmode -f" make -e all-pdf
 
-    cp /latex/${FILE%.rst}.pdf /pdf/$(date +%Y%m%)-${FILE%.rst}.pdf
+    cp /latex/${FILENAME%.rst}.pdf /pdf/$(date +%Y%m%)-${FILENAME%.rst}.pdf
 
 fi
