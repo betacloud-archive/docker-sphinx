@@ -5,4 +5,5 @@ docker run --rm \
     -v $(pwd):/pdf \
     -e DOCUMENT=index \
     -e TYPE=latex \
+    -e CUSTOMER="Betacloud Solutions GmbH" \
     betacloud/sphinx:latest
