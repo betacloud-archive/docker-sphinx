@@ -1,26 +1,35 @@
 #!/usr/bin/env bash
 
 CONFPATH=${CONFPATH:-/source}
-DOCUMENT=${DOCUMENT:-index}
+FILENAME=${FILENAME:-index.rst}
+SOURCEPATH=${SOURCEPATH:-/source}
 TYPE=${TYPE:-html}
 
 if [[ ! -e $CONFPATH/conf.py ]]; then
+
     CONFPATH=/
+
 fi
 
 ##########
 # html
+
 if [[ $TYPE == "html" ]]; then
-    sphinx-build -c $CONFPATH -a -b html /source /html
+
+    sphinx-build -c $CONFPATH -b html $SOURCEPATH /html $FILENAME
+
 fi
 
 ##########
 # latex
+
 if [[ $TYPE == "latex" ]]; then
-    sphinx-build -c $CONFPATH -a -b latex /source /latex
+
+    sphinx-build -c $CONFPATH -b latex $SOURCEPATH /latex $FILENAME
 
     cd /latex
     LATEXMKOPTS="-interaction=nonstopmode -f" make -e all-pdf
 
-    cp /latex/$DOCUMENT.pdf /pdf
+    cp /latex/${FILE%.rst}.pdf /pdf
+
 fi
