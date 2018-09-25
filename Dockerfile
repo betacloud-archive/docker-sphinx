@@ -17,7 +17,6 @@ RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get clean \
     && apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended  make python-pip \
-    && pip install --upgrade "pip<10.0.0" \
     && pip install \
       Flask-Sphinx-Themes \
       sphinx \
