@@ -16,7 +16,14 @@ COPY files/run.sh /run.sh
 RUN apt-get update \
     && apt-get upgrade -y \
     && apt-get clean \
-    && apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended  make python-pip \
+    && apt-get install -y \
+      latexmk \
+      make \
+      python-pip \
+      texlive-fonts-recommended \
+      texlive-lang-german \
+      texlive-latex-extra \
+      texlive-latex-recommended \
     && pip install \
       Flask-Sphinx-Themes \
       sphinx \
