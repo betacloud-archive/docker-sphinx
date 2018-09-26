@@ -24,7 +24,17 @@ html_theme_options = {}
 today_fmt = "%d.%m.%Y"
 latex_elements = {
   "papersize": "a4paper",
-  "preamble": "\input{/preamble.tex}",
+  "preamble": r'''
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\rhead{\includegraphics[width=1cm]{/betacloud}}
+
+\lfoot{\footnotesize{Betacloud Solutions GmbH / Teckstrasse 62 / D-70190 Stuttgart}}
+\rfoot{\footnotesize{\thepage\ / \pageref{LastPage}}}
+'''
 }
 latex_documents = [
   (DOCUMENT,
@@ -34,3 +44,4 @@ latex_documents = [
    "howto"
   )
 ]
+latex_use_xindy = True

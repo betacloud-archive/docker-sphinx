@@ -9,7 +9,6 @@ ENV DOCUMENT ${DOCUMENT:-index}
 ENV TYPE ${TYPE:-html}
 
 COPY files/betacloud.png /betacloud.png
-COPY files/preamble.tex /preamble.tex
 COPY files/conf.py /conf.py
 COPY files/run.sh /run.sh
 
@@ -30,6 +29,8 @@ RUN apt-get update \
       sphinxcontrib-blockdiag \
       sphinxcontrib-nwdiag \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+COPY files/latex.tex_t /usr/local/lib/python2.7/dist-packages/sphinx/templates/latex/latex.tex_t
 
 VOLUME /html
 VOLUME /latex
