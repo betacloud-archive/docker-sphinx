@@ -8,7 +8,7 @@ ENV CONFPATH ${CONFPATH:-/source}
 ENV DOCUMENT ${DOCUMENT:-index}
 ENV TYPE ${TYPE:-html}
 
-COPY files/betacloud.png /betacloud.png
+COPY files/logo.png /logo.png
 COPY files/conf.py /conf.py
 COPY files/run.sh /run.sh
 

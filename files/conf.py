@@ -30,7 +30,7 @@ latex_elements = {
 \pagestyle{fancy}
 \fancyhf{}
 
-\rhead{\includegraphics[width=1cm]{/betacloud}}
+\rhead{\includegraphics[width=1cm]{/logo}}
 
 \lfoot{\footnotesize{Betacloud Solutions GmbH / Teckstrasse 62 / D-70190 Stuttgart / info@betacloud-solutions.de}}
 \rfoot{\footnotesize{\thepage\ / \pageref{LastPage}}}
