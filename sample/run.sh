@@ -5,5 +5,5 @@ docker run -it --entrypoint=/bin/bash --rm \
     -v $(pwd):/pdf \
     -e FILENAME=index.rst \
     -e TYPE=latex \
-    -e CUSTOMER="Betacloud Solutions GmbH" \
+    -e CUSTOMER="Lorem Ipsum GmbH" \
     betacloud/sphinx:latest
